@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Router, Redirect } from "@reach/router";
+import HeaderSection from './containers/HeaderSection';
+import HomePage from './containers/MainSection/HomePage';
+import LoaderSpinner from './components/LoaderSpinner';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const ProtectedRoute = ({ component: Component, ...rest }) => {
+  if(rest.isAuth===true){
+    return <Component {...rest} />
+  } else if(rest.isAuth===null){
+    return <LoaderSpinner/>
+  }else{
+    return <Redirect from="" to="/login" noThrow />
+  }
+}
+
+const PublicRoute = ({ component: Component, ...rest }) => (
+  <Component {...rest} />
+);
+
+const InverseRoute = ({ component: Component, ...rest }) => {
+    if(rest.isAuth===true){
+      return <Redirect from="" to="/" noThrow />
+    } else if(rest.isAuth===null){
+      return <LoaderSpinner/>
+    }else{
+      return <Component {...rest} />
+    }
+}
+
+
+class App extends React.Component{
+  render(){
+    return (
+      <>
+        <HeaderSection/>
+        <Router className="main-section">
+          <PublicRoute path="/" component={HomePage}/>
+
+        </Router>
+      </>
+      );
+  }
 }
 
 export default App;
