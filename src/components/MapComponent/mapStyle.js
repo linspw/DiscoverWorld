@@ -15,8 +15,8 @@ export const countriesLayer = {
     'source-layer': 'ne_10m_admin_0_countries-1stuw5',
     'type': 'fill',
     paint: {
-      'fill-outline-color': '#484226',
-      'fill-color': '#1e599f',
+      'fill-outline-color': '#827f72',
+      'fill-color': '#83b0e6',
       'fill-opacity': 0.75
     }
   };

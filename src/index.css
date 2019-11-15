@@ -1,6 +1,19 @@
+@font-face{
+	font-family: 'Rubik-Regular';
+	src: url('./style/fonts/Rubik/Rubik-Regular.ttf');
+}
+@font-face{
+	font-family: 'Rubik-Medium';
+	src: url('./style/fonts/Rubik/Rubik-Medium.ttf');
+}
+@font-face{
+	font-family: 'Rubik-Bold';
+	src: url('./style/fonts/Rubik/Rubik-Bold.ttf');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Rubik-Regular",-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +23,31 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.bg-color-p1{
+  background-color: #0353B4;
+}
+.bg-color-p2{
+  background-color: #06428A;
+}
+.bg-color-p3{
+  background-color: #18A4E1;
+}
+.bg-color-p4{
+  background-color: #ffffff;
+}
+.bg-color-p5{
+  background-color: #eef2f5;
+}
+.bg-color-p6{
+  background-color: #a9aebd;
+}
+.bg-color-p7{
+  background-color: #0b0D31;
+}
+
+.bx-shadow-p1{
+  box-shadow: 0 0 30px 6px rgba(31, 51, 73, 0.10) !important;
 }

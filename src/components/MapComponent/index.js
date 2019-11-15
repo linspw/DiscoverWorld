@@ -7,12 +7,6 @@ import {countriesLayer, highlightedLayer} from './mapStyle';
 class MapComponent extends React.Component{
     filterBase = ['all', ['in', 'ADM0_A3_IS']]
     viewportBase = {
-        width: '100%',
-        height: '100%',
-    }
-    state = {
-        filter: this.filterBase[1],
-        viewport: {
             width: '100%',
             height: '100%',
             latitude: 25,
@@ -21,12 +15,15 @@ class MapComponent extends React.Component{
             minZoom: 2,
             bearing: 0,
             pitch: 0
-          },
-          mounted: false
+    }
+    state = {
+        filter: this.filterBase[1],
+        viewport: this.viewportBase,
+        mounted: false
     }
     _onViewportChange = (viewport) => {
         if(this.mounted){
-            //console.log("Atualizou")
+            console.log(this.state.viewport)
             this.setState({viewport})
         }   
     }
@@ -41,14 +38,31 @@ class MapComponent extends React.Component{
             }
         }
     }
-    setMountedTrue = async () => {
-        this.mounted=true;
+    setMountedTrue = async (value = true) => {
+        this.mounted=value;
+    }
+    setMapResize = async (e) => {   
+        //console.log(e);
+        if(this.mounted){
+            console.log("Status:", this.state.viewport)
+            console.log(e)
+            let viewport = this.state.viewport;
+            await this.setState({...this.state,  viewport:{...viewport, width: '100%', height: '100%'}})
+        }
+        
     }
     render(){
         return (
-            <ReactMapGL mapboxApiAccessToken={process.env.REACT_APP_MAPS_API_KEY} {...this.state.viewport} onViewportChange={(viewpt)=>this._onViewportChange(viewpt)}
-            mapStyle={'mapbox://styles/linspw/ck2tqvvm85mdc1do11uebu1q9?optimize=true'} onClick={(e)=>console.log(e)} filter={this.state.filter} onHover={(e)=>this._onHover(e)}
-            onLoad={()=>this.setMountedTrue()} interactiveLayerIds={['countries']}
+            <ReactMapGL 
+            mapboxApiAccessToken={process.env.REACT_APP_MAPS_API_KEY}
+            mapStyle={'mapbox://styles/linspw/ck2tqvvm85mdc1do11uebu1q9?optimize=true'} width="100%" height="100%"
+            {...this.state.viewport} 
+            filter={this.state.filter} interactiveLayerIds={['countries']} 
+            onViewportChange={(viewpt)=>this._onViewportChange(viewpt)}
+            onClick={(e)=>console.log(e)}
+            onHover={(e)=>this._onHover(e)}
+            onResize={(e)=>this.setMapResize(e)}
+            onLoad={()=>this.setMountedTrue()} 
             >
                 <Source id="source-highlighted" type="vector" url="mapbox://linspw.3wdxyikf">
                     <Layer {...countriesLayer} />
