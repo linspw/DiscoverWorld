@@ -1,4 +1,4 @@
-import React, {Component, useRef} from 'react';
+import React from 'react';
 import ReactMapGL, {Popup, Source, Layer} from 'react-map-gl';
 import {countriesLayer, highlightedLayer} from './mapStyle';
 import ReactResizeDetector from 'react-resize-detector';
@@ -21,7 +21,7 @@ const MapComponent = (props) => {
   }
   const _onClick = (event) => {
     console.log(event.features)
-    console.log(event)
+    //console.log(event)
   }
   const _onHover = (event) => {
     //console.log(event)

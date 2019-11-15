@@ -1,5 +1,6 @@
-import { CREATE_MODAL } from '../constants/action_types';
+import { SHOW_MODAL } from '../constants/action_types';
 
-export function createModal(data) {
-    return { type: CREATE_MODAL, data }
+export function showModal(data) {
+    console.log("Data",data)
+    return { type: SHOW_MODAL, newValue: data }
 };

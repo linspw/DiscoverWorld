@@ -1,1 +1,1 @@
-export const CREATE_MODAL = "CREATE_MODAL";
+export const SHOW_MODAL = "SHOW_MODAL";

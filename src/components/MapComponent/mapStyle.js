@@ -1,6 +1,5 @@
 export const countriesLayer = {
     id: 'countries',
-    'type': 'vector',
     'source-layer': 'ne_10m_admin_0_countries-1stuw5',
     'type': 'fill',
     'layout': {'visibility':'visible'},
@@ -11,7 +10,6 @@ export const countriesLayer = {
   // Highlighted county polygons
   export const highlightedLayer = {
     id: 'countries-highlighted',
-    'type': 'vector',
     'source-layer': 'ne_10m_admin_0_countries-1stuw5',
     'type': 'fill',
     paint: {

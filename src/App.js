@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Redirect } from "@reach/router";
 import HeaderSection from './containers/HeaderSection';
 import HomePage from './containers/MainSection/HomePage';
-import LoaderSpinner from './components/LoaderSpinner';
+//import LoaderSpinner from './components/LoaderSpinner';
 import './App.css';
 
 /*

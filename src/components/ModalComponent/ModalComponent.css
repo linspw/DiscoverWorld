@@ -1,0 +1,51 @@
+.modal-full{
+    position: absolute;
+    right: 0; left: 0; top: 0; bottom: 0;
+    margin-right: auto; margin-left: auto; margin-top: auto; margin-bottom: auto;
+    min-height: 10em; max-height: 70%; display: flex; align-items: center; justify-content: center;
+    width: 70%; 
+    background-color: rgb(255, 255, 255); box-shadow: 0 0 20px 9px rgba(31, 51, 73, 0.2);
+    z-index: 1000;  overflow: auto;
+}
+
+    .button-modal-close{
+        position: absolute;
+        top: 0; right: 0;
+        font-family: "Nunito-Regular"; color: white;
+        padding: 10px 14px 10px 14px; border-radius: 0px 0px 0px 16px;
+    }
+    .painel-interator{
+        position: relative;
+        border-radius: 20px;
+        padding: 10px 10px 10px 10px;  
+    }
+        .painel-interator > .interator{
+            position: absolute;
+            z-index: 1010;
+            bottom: 100%; left: 0; display: flex;
+            width: 100%; height: 1.5em; 
+            /*bottom: 100%; right: 0; left: 0; margin-right: auto; margin-left: auto;
+            width: 6em; height: 1.75em;
+            border-radius: 10px 10px 0px 0px;*/
+            width: 100%;
+        }
+        .painel-interator > .interator > .blank {
+            width: 30%;
+            background-color: white;
+        }
+        .painel-interator > .interator > .blank.left{
+            border-radius: 0 0 14px 0px;
+        }
+        .painel-interator > .interator > .blank.right{
+            border-radius: 0 0 0px 14px;
+        }
+        .painel-interator > .interator > .main {
+            border-radius: 10px; width: 40%;
+            background-color: white;
+        }
+        .painel-interator > .content {
+            color: white; font-family: 'Rubik-Regular';
+
+            min-width: 15em;
+            min-height: 3em;
+        }

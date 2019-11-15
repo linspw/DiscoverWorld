@@ -1,12 +1,14 @@
-import { CREATE_MODAL } from '../constants/action_types';
+import { SHOW_MODAL } from '../constants/action_types';
 
 const initialState = {
     modalIsActive: false
 };
+
 function rootReducer(state = initialState, action) {
-    if (action.type === CREATE_MODAL){
+    //console.log("Estado:",state, "Ação:", action)
+    if (action.type === SHOW_MODAL){
         return Object.assign({}, state, {
-            modalIsActive: state.data
+            modalIsActive: action.newValue
         });
     }
     return state;
