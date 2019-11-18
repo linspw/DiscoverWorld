@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { showModal } from '../../redux/actions/modal_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDragon } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 
 class HeaderSection extends React.Component{
@@ -15,8 +15,8 @@ class HeaderSection extends React.Component{
     render(){
         return(
             <div className="header-section">
-                <FontAwesomeIcon icon={faDragon}/>
-                <button className="button-primary bg-color-p2-c1" onClick={()=>this._onClick()}>Ola</button>
+                <button className="btn-logo">DiscoverWorld<FontAwesomeIcon icon={faPaperPlane}/></button>
+                <button className="button-primary bg-color-p2-c1 bx-shadow-p2-c1" onClick={()=>this._onClick()}>Ola</button>
             </div>
         );
     }

@@ -1,0 +1,26 @@
+.painel-map-controller{
+    position: absolute; bottom: 0px; right: 0; left: 0; bottom: 0;
+    margin-right: auto; margin-left: auto;
+    background-color: white; height: 3.5em; width: 32em; z-index: 1000; border-radius: 40px 40px 0px 0px;
+    box-shadow: 0px 0px 20px 1px rgba(53, 63, 223, 0.3); display: flex; overflow: hidden;
+}
+    .painel-map-controller > .painel-map-item{
+        width: 100%; flex-grow: 1; color: #a9aebd; font-size: 20px;
+        display: flex; align-items: center; justify-content: center; position: relative; padding: 0.5em;
+    }
+        .painel-map-controller > .painel-map-item.map-item-border{
+            /*border-right: 1px solid #a9aebd;*/
+        }
+        .painel-map-controller > .painel-map-item.map-item-border-left{
+            border-radius: 40px 0px 0px 0px;
+        }
+        .painel-map-controller > .painel-map-item.map-item-border-right{
+            border-radius: 0px 40px 0px 0px;
+        }
+        .painel-map-controller > .painel-map-item.logo{
+            overflow: hidden;
+        }
+            .painel-map-controller > .painel-map-item.logo>.context{
+                position: absolute;
+                /*height: calc(100% + 2em); width: calc(100% + 0.5em);*/ background-color: #353fdf; color: white; border-radius: 25px; padding: 14px; font-size: 18px;
+            }
