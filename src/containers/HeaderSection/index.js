@@ -8,15 +8,15 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 class HeaderSection extends React.Component{
     _onClick = () => {
-        console.log("Props:",this.props)
-        console.log("Clickado")
+        //console.log("Props:",this.props)
+        //console.log("Clickado")
         this.props.showModal(!this.props.modalIsActive)
     }
     render(){
         return(
             <div className="header-section">
-                <button className="btn-logo">DiscoverWorld<FontAwesomeIcon icon={faPaperPlane}/></button>
-                <button className="button-primary bg-color-p2-c1 bx-shadow-p2-c1" onClick={()=>this._onClick()}>Ola</button>
+                <button className="btn-logo">DiscoverWorld <FontAwesomeIcon className="plane" color="#6266a9" icon={faPaperPlane}/></button>
+                <button className="button-primary bg-color-p2-c1 bx-shadow-p2-c1" onClick={()=>this._onClick()}>Cadastrar</button>
             </div>
         );
     }

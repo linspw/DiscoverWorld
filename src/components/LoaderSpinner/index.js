@@ -8,7 +8,7 @@ var divStyle = {
     height: '100%',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center', zIndex: '1000'
 }
 const LoadingSpinner = (props) => {
     return(

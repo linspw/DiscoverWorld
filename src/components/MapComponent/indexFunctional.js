@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMapGL, {Popup, Source, Layer} from 'react-map-gl';
 import {countriesLayer, highlightedLayer} from './mapStyle';
+import LoaderSpinner from '../LoaderSpinner';
 import ReactResizeDetector from 'react-resize-detector';
 
 
@@ -49,23 +50,25 @@ const MapComponent = (props) => {
     }
   }
   return (
-    <ReactResizeDetector className="map-container" onResize={_onResize} handleWidth handleHeight>
-      <ReactMapGL {...state.viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPS_API_KEY}
-        mapStyle={'mapbox://styles/linspw/ck2zjmqg704f81cokutacqju2?optimize=true'}
-        filter={state.filter} interactiveLayerIds={['countries']}
-        onViewportChange={viewport => _onViewportChange(viewport)}
-        onHover={(e)=>_onHover(e)}
-        onLoad={(e)=>_onload(e)}
-        onClick={(e)=>_onClick(e)}
-      >
-        <Source id="source-highlighted" type="vector" url="mapbox://linspw.3wdxyikf">
-          <Layer {...countriesLayer} />
-          <Layer {...highlightedLayer} filter={state.filter}/>
-        </Source>
-      </ReactMapGL>
-    </ReactResizeDetector>
-    
+    <>
+      <ReactResizeDetector className="map-container" onResize={_onResize} handleWidth handleHeight>
+        <ReactMapGL {...state.viewport}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPS_API_KEY}
+          mapStyle={'mapbox://styles/linspw/ck2zjmqg704f81cokutacqju2?optimize=true'}
+          filter={state.filter} interactiveLayerIds={['countries']}
+          onViewportChange={viewport => _onViewportChange(viewport)}
+          onHover={(e)=>_onHover(e)}
+          onLoad={(e)=>_onload(e)}
+          onClick={(e)=>_onClick(e)}
+        >
+          <Source id="source-highlighted" type="vector" url="mapbox://linspw.3wdxyikf">
+            <Layer {...countriesLayer} />
+            <Layer {...highlightedLayer} filter={state.filter}/>
+          </Source>
+        </ReactMapGL>
+      </ReactResizeDetector>
+      {!state.isMounted && <LoaderSpinner/>}
+    </>
   );
 };
 
