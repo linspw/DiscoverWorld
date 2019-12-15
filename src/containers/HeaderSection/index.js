@@ -16,7 +16,7 @@ class HeaderSection extends React.Component{
         return(
             <div className="header-section">
                 <button className="btn-logo">DiscoverWorld <FontAwesomeIcon className="plane" color="#6266a9" icon={faPaperPlane}/></button>
-                <button className="button-primary bg-color-p2-c1 bx-shadow-p2-c1" onClick={()=>this._onClick()}>Cadastrar</button>
+                <button className="button-primary bg-color-p2-c1 bx-shadow-p2-c1" onClick={()=>this._onClick()}>menu</button>
             </div>
         );
     }

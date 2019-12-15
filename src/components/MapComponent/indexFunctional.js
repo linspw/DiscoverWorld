@@ -67,7 +67,7 @@ const MapComponent = (props) => {
           </Source>
         </ReactMapGL>
       </ReactResizeDetector>
-      {!state.isMounted && <LoaderSpinner/>}
+      {state.isMounted==false && <LoaderSpinner/>}
     </>
   );
 };
