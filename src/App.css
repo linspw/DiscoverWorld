@@ -11,17 +11,27 @@
 .map-container{
     position: absolute; width: 100%; height: 100%;
 }
-    .header-section > .btn-logo{
+    .header-section > .bar-group > .btn-logo{
         width: 10em; height: 100%; display: flex; align-items: center; justify-content: center;
         font-size: 18px; font-family: 'Rubik-Medium'; color: #0b0D31;
     }
-    .header-section > .btn-logo > .plane{
+    .header-section > .bar-group > .btn-logo > .plane{
         margin-left: 4px;
+    }
+    .header-section > .bar-group{
+        display: flex; flex-direction: row;
     }
     .button-primary{
         font-family: "Nunito-Regular"; color: white;
         padding: 10px 40px 10px 40px; margin: 5px; border-radius: 26px; height: 1.625em;
-
+    }
+    .button-menu-right{
+        font-family: "Nunito-Regular"; color: white;
+        height: 100%; padding: 0 10px 0 10px;
+    }
+    .header-section .title-bar{
+        font-family: "Nunito-Regular";
+        display: flex; align-items: center; justify-content: center;
     }
 
 .fadeOut{

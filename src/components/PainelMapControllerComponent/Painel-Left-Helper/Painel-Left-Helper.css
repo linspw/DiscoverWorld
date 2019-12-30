@@ -1,0 +1,15 @@
+.painel-left-helper{
+    position: absolute; margin: auto; width: 2.75em; height: 16em; left: 0; top:0; bottom: 0;
+    background-color: white; display: flex; flex-direction: column;
+}
+.painel-left-helper > button.top{
+    background-color: rgb(185, 252, 86); color: white; font-size: 12px;
+    padding: 1px 0px 1px 0px;
+    display: flex; align-items: center; justify-content: center;
+}
+.painel-left-helper > button.item{
+    display: flex; align-items: center; justify-content: center;
+    color: #a9aebd;
+    padding: 4px 0px 4px 0px;
+    flex: 1;
+}

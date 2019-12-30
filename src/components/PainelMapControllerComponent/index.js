@@ -25,7 +25,7 @@ const PainelMapControllerComponent = (props) => {
             <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faPassport}/></button>
             <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faMap}/></button>
             <div className="painel-map-item map-item-border logo">
-                <button className="context bx-shadow-p2-c1" onClick={()=>_onClickMainButton()}><FontAwesomeIcon icon={faPaperPlane}/></button>
+                <button className="context" onClick={()=>_onClickMainButton()}><FontAwesomeIcon icon={faPaperPlane}/></button>
             </div>
             <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faUmbrellaBeach}/></button>
             <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faCompass}/></button>
