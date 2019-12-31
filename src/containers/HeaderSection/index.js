@@ -21,7 +21,7 @@ class HeaderSection extends React.Component{
                     <button className="btn-logo" onClick={()=>window.location.reload()}>DiscoverWorld <FontAwesomeIcon className="plane" color="#6266a9" icon={faPaperPlane}/></button>
                 </div>
                 <div className="bar-group">
-                    <div className="title-bar">
+                    <div className="title-bar mobileOff">
                         Mapa global
                     </div>
                 </div>

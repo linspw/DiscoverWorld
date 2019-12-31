@@ -43,10 +43,13 @@
     }
         .modal-group-main-section > .modal-fliper{
             position: absolute; top: 0px; right: 0; left: 0; top: 0;
-            margin-right: auto; margin-left: auto; border: 1px solid rgb(185, 183, 183); height: 2.5em; max-width: 26em; border-radius: 0px 0px 40px 40px; z-index: 10;
-            display: flex; overflow: hidden;
+            margin-right: auto; margin-left: auto; border: 1px solid rgb(185, 183, 183); height: 2.5em; max-width: 30em; border-radius: 0px 0px 40px 40px; z-index: 10;
+            display: flex; overflow: hidden; background-color: white;
         }
         .modal-fliper > .modal-fliper-item{
             width: 100%; flex-grow: 1; color: #617dcf; font-size: 16px; font-family: 'Nunito-Regular';
             display: flex; align-items: center; justify-content: center; position: relative;
+        }
+        .modal-fliper-item > span{
+            margin-left: 4px;
         }

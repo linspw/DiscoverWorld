@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { showModal } from '../../redux/actions/modal_actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowMinimize ,faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faWindowMinimize ,faTimes, faMapMarkedAlt, faInfo, faGlobeAmericas } from '@fortawesome/free-solid-svg-icons';
 import InteratorComponent from '../InteratorComponent';
 import FlagComponent from '../FlagComponent/FlagComponent';
 import './ModalComponent.css';
@@ -54,9 +54,9 @@ const ModalMapComponent = (props) => {
       </div>
       <div className="modal-group-main-section">
         <div className="modal-fliper">
-          <button className="modal-fliper-item" onClick={()=>buttonInteractive_onClick()}>Interativo</button>
-          <button className="modal-fliper-item" onClick={()=>buttonInformation_onClick()}>Informações</button>
-          <button className="modal-fliper-item" onClick={()=>buttonTravelGuide_onClick()}>Guia de Viagem</button>
+          <button className="modal-fliper-item" onClick={()=>buttonInteractive_onClick()}><FontAwesomeIcon icon={faGlobeAmericas}/><span className="mobileOff">Interativo</span></button>
+          <button className="modal-fliper-item" onClick={()=>buttonInformation_onClick()}><FontAwesomeIcon icon={faInfo}/><span className="mobileOff">Informações</span></button>
+          <button className="modal-fliper-item" onClick={()=>buttonTravelGuide_onClick()}><FontAwesomeIcon icon={faMapMarkedAlt}/><span className="mobileOff">Guia de Viagem</span></button>
         </div>
         <Router>
           <InteractiveContainer path="interactive"/>
