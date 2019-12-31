@@ -38,7 +38,7 @@ class App extends React.Component{
       <>
         <HeaderSection/>
         <Router className="main-section">
-          <PublicRoute path="/" component={HomePage}/>
+          <PublicRoute path="/*" component={HomePage}/>
         </Router>
       </>
       );

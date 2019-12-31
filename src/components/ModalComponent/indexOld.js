@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
 import { showModal } from '../../redux/actions/modal_actions';
@@ -22,24 +22,23 @@ const buttonInformation_onClick = () => {
 const buttonTravelGuide_onClick = () => {
   navigate("/painel/country/brazil/travelguide");
 }
-/*
+
 const mapDispatchToProps = (dispatch) =>{
   return bindActionCreators({ showModal }, dispatch);
 }
 const mapStateToProps = state => {
   return { modalIsActive: state.modalIsActive };
-};*/
+};
 
 const ModalMapComponent = (props) => {
-  const [modalIsActive, setModalIsActive] = useState(true);
-  const _onClick = async () => {
-    setModalIsActive(false)
-    await new Promise(r => setTimeout(r, 500));
+  const _onClick = () => {
     console.log("Props:",props)
+    props.showModal(false)
     navigate("/");
   }
+  props?console.log(props):console.log("Funcionou")
   return (
-    <div className={"modal-map-full "+(modalIsActive?'fadeIn':'fadeOut')}>
+    <div className={"modal-map-full "+(props.modalIsActive?'fadeIn':'fadeOut')}>
       <div className="modal-group-top-bar-default">
         <button className="button-modal-top-bar bg-color-p2-c2" onClick={()=>_onClick()}><FontAwesomeIcon icon={faWindowMinimize} /></button>
         <button className="button-modal-top-bar bg-color-p2-c1" onClick={()=>_onClick()}><FontAwesomeIcon icon={faTimes} /></button>
@@ -59,14 +58,13 @@ const ModalMapComponent = (props) => {
           <button className="modal-fliper-item" onClick={()=>buttonTravelGuide_onClick()}>Guia de Viagem</button>
         </div>
         <Router>
-          <InteractiveContainer path="interactive"/>
-          <Redirect from="/" to="painel/country/brazil/interactive" noThrow/>
-          <InformationContainer path="information"/>
-          <TravelGuideContainer path="travelguide"/>
+          <InteractiveContainer path="painel/country/brazil/interactive"/>
+          <InformationContainer path="painel/country/brazil/information"/>
+          <TravelGuideContainer path="painel/country/brazil/travelguide"/>
         </Router>
       </div>
     </div>
   );
 }
 
-export default ModalMapComponent;
+export default connect(mapStateToProps, mapDispatchToProps)(ModalMapComponent);

@@ -3,7 +3,11 @@ import ReactMapGL, {Popup, Source, Layer} from 'react-map-gl';
 import {countriesLayer, highlightedLayer} from './mapStyle';
 import LoaderSpinner from '../LoaderSpinner';
 import ReactResizeDetector from 'react-resize-detector';
+import { navigate } from '@reach/router';
 
+const openModal = () => {
+  navigate("/painel/country/brazil/interactive");
+}
 
 const MapComponent = (props) => {
   const filterBase = ['all', ['in', 'ADM0_A3_IS']];
@@ -21,8 +25,10 @@ const MapComponent = (props) => {
     setState({...state, mounted:true})
   }
   const _onClick = (event) => {
-    console.log(event.features)
-    //console.log(event)
+    if(event.features.length > 0){
+      console.log(event.features, "País:", event.features[0].properties.NAME_PT);
+      openModal();
+    }
   }
   const _onHover = (event) => {
     //console.log(event)

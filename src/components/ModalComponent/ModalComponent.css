@@ -1,73 +1,52 @@
-.modal-full{
+.modal-map-full{
     position: absolute;
     right: 0; left: 0; top: 0; bottom: 0;
     margin-right: auto; margin-left: auto; margin-top: auto; margin-bottom: auto;
-    min-height: 10em; max-height: 70%; display: flex; align-items: center; justify-content: center;
+    min-height: 10em; max-height: 70%;
     width: 70%; 
     background-color: rgb(255, 255, 255); box-shadow: 0px 0px 20px 1px rgba(53, 63, 223, 0.3);
     z-index: 1000;  overflow: auto;
+    display: flex; flex-direction: column;
 }
-
-    .button-modal-close{
+    .modal-group-top-bar-default{
         position: absolute;
-        top: 0; right: 0;
-        font-family: "Nunito-Regular"; color: white;
-        padding: 10px 14px 10px 14px; border-radius: 0px 0px 0px 2px;
+        top: 0; right: 0; z-index: 1;
     }
-    .painel-interator{
-        position: absolute; bottom: 2.5em;
-        border-radius: 26px;
-        padding: 10px 10px 10px 10px;  
+        .modal-group-top-bar-default > .button-modal-top-bar{
+            font-family: "Nunito-Regular"; color: white;
+            padding: 6px 10px 6px 10px; font-size: 12px;
+        }
+    
+    .modal-group-top-section{
+        background-color: teal; height: 10em; width: 100%; overflow: hidden; position: relative;
+        display: flex; align-items: center; justify-content: center;
     }
-        .painel-interator > .interator{
-            position: absolute;
-            z-index: 1010;
-            bottom: 100%; left: 0; display: flex;
-            width: 26%; height: 1.2em; 
-            bottom: 100%; right: 0; left: 0; margin-right: auto; margin-left: auto;
-            width: 6em; height: 1.80em;
-            border-radius: 26px 26px 0px 0px;
-            padding: 0px 10px 0px 10px; justify-content: center;
+        .modal-group-top-section > img.wallpaper{
+            background-color: teal;  width: 100%;
         }
-        .painel-interator > .interator::before{
-            content: "";
-            position: absolute;
-
-            z-index: 1010;
-            background-color: transparent;
-            bottom: 0px; right: calc(100% - 0.34em);
-            height: 100%; width: 2em;
-            border-bottom-right-radius: 26px;
-            box-shadow: 0px 15px 0 0 #353fdf;
+        .modal-group-top-section > .country-initial-description{
+            position: absolute; left: 4px; bottom: 0.2em; display: flex; flex-direction: column;
+            color: white;
         }
-        .painel-interator > .interator::after{
-            content: "";
-            position: absolute;
-
-            z-index: 1010;
-            background-color: transparent;
-            bottom: 0px; left: calc(100% - 0.34em);
-            height: 100%; width: 2em;
-            border-bottom-left-radius: 26px;
-            box-shadow: 0px 15px 0 0 #353fdf;
-        }
-        .painel-interator > .interator > .element-pointer{
-            width: 4px; display: flex; align-items: center; justify-content: center;
-            font-size: 6px;padding: 0px 8px 0px 8px; color: rgba(255, 255, 255, 0.600);
-        }
-        .painel-interator > .interator > .element-pointer.active{
-            color: rgba(255, 255, 255, 1);
-        }
-        .painel-interator > .content {
-            padding: 0px 10px 0px 10px;
-            display: flex; align-items: center; justify-content: space-between;
-            min-width: 16em;
-            min-height: 3em;
-        }
-            .painel-interator > .content > .text {
-                color: white;
+            .country-initial-description > span{
+                background-color: rgba(0, 0, 0, 0.2);
             }
-            .painel-interator > .content > .circle-page{
-                border-radius: 50%; display: flex; align-items: center; justify-content: center;
-                color: #353fdf; background-color: white; width: 1em; height: 1em;padding: 0.3em; 
+            .country-initial-description > span.country-title{
+                font-family: 'Nunito-Bold'; font-size: 20px;
             }
+            .country-initial-description > span.country-subtitle{
+                font-style: italic;
+            }
+    .modal-group-main-section{
+        position: relative;
+        min-height: calc(100% - 10em); width: 100%;
+    }
+        .modal-group-main-section > .modal-fliper{
+            position: absolute; top: 0px; right: 0; left: 0; top: 0;
+            margin-right: auto; margin-left: auto; border: 1px solid rgb(185, 183, 183); height: 2.5em; max-width: 26em; border-radius: 0px 0px 40px 40px; z-index: 10;
+            display: flex; overflow: hidden;
+        }
+        .modal-fliper > .modal-fliper-item{
+            width: 100%; flex-grow: 1; color: #617dcf; font-size: 16px; font-family: 'Nunito-Regular';
+            display: flex; align-items: center; justify-content: center; position: relative;
+        }

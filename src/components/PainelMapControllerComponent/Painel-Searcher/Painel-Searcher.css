@@ -1,0 +1,12 @@
+.painel-searcher{
+    position: absolute; left: 4px; top: 4px;
+    width: 20em; height: 2em;
+    display: flex; flex-direction: row;
+}
+.painel-searcher input[type=text]{
+    height: 100%; width: calc(100% - 2em); border: none; background-color: white;
+}
+.painel-searcher button.search{
+    height: 100%; width: 2em; display: flex; align-items: center; justify-content: center;
+    color: #fff; background-color: #b9fc56; padding: 0px 4px 0px 4px;
+}

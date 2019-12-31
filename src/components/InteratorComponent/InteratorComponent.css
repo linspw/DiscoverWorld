@@ -1,0 +1,57 @@
+.painel-interator{
+    position: absolute; bottom: 2.5em;
+    border-radius: 26px;
+    padding: 10px 10px 10px 10px;  
+}
+    .painel-interator > .interator{
+        position: absolute;
+        z-index: 1010;
+        bottom: 100%; left: 0; display: flex;
+        width: 26%; height: 1.2em; 
+        bottom: 100%; right: 0; left: 0; margin-right: auto; margin-left: auto;
+        width: 6em; height: 1.80em;
+        border-radius: 26px 26px 0px 0px;
+        padding: 0px 10px 0px 10px; justify-content: center;
+    }
+    .painel-interator > .interator::before{
+        content: "";
+        position: absolute;
+
+        z-index: 1010;
+        background-color: transparent;
+        bottom: 0px; right: calc(100% - 0.34em);
+        height: 100%; width: 2em;
+        border-bottom-right-radius: 26px;
+        box-shadow: 0px 15px 0 0 #353fdf;
+    }
+    .painel-interator > .interator::after{
+        content: "";
+        position: absolute;
+
+        z-index: 1010;
+        background-color: transparent;
+        bottom: 0px; left: calc(100% - 0.34em);
+        height: 100%; width: 2em;
+        border-bottom-left-radius: 26px;
+        box-shadow: 0px 15px 0 0 #353fdf;
+    }
+    .painel-interator > .interator > .element-pointer{
+        width: 4px; display: flex; align-items: center; justify-content: center;
+        font-size: 6px;padding: 0px 8px 0px 8px; color: rgba(255, 255, 255, 0.600);
+    }
+    .painel-interator > .interator > .element-pointer.active{
+        color: rgba(255, 255, 255, 1);
+    }
+    .painel-interator > .content {
+        padding: 0px 10px 0px 10px;
+        display: flex; align-items: center; justify-content: space-between;
+        min-width: 16em;
+        min-height: 3em;
+    }
+        .painel-interator > .content > .text {
+            color: white;
+        }
+        .painel-interator > .content > .circle-page{
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            color: #353fdf; background-color: white; width: 1em; height: 1em;padding: 0.3em; 
+        }

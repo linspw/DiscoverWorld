@@ -18,7 +18,7 @@ class HeaderSection extends React.Component{
         return(
             <div className="header-section">
                 <div className="bar-group">
-                    <button className="btn-logo">DiscoverWorld <FontAwesomeIcon className="plane" color="#6266a9" icon={faPaperPlane}/></button>
+                    <button className="btn-logo" onClick={()=>window.location.reload()}>DiscoverWorld <FontAwesomeIcon className="plane" color="#6266a9" icon={faPaperPlane}/></button>
                 </div>
                 <div className="bar-group">
                     <div className="title-bar">
