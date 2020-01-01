@@ -14,7 +14,7 @@ class HomePage extends React.Component{
         return(
             <>
                 <Router>
-                    <ModalMapComponent path="painel/country/brazil/*"/>
+                    <ModalMapComponent path="painel/country/:countryName/*"/>
                 </Router>
                 <MapComponent/>
                 <PainelMapControllerComponent/>

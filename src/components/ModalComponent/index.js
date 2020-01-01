@@ -32,6 +32,7 @@ const mapStateToProps = state => {
 
 const ModalMapComponent = (props) => {
   const [modalIsActive, setModalIsActive] = useState(true);
+  console.log(props.countryName)
   const _onClick = async () => {
     setModalIsActive(false)
     await new Promise(r => setTimeout(r, 500));
@@ -39,7 +40,7 @@ const ModalMapComponent = (props) => {
     navigate("/");
   }
   return (
-    <div className={"modal-map-full "+(modalIsActive?'fadeIn':'fadeOut')}>
+    <div className={"modal-semi-full "+(modalIsActive?'fadeIn':'fadeOut')}>
       <div className="modal-group-top-bar-default">
         <button className="button-modal-top-bar bg-color-p2-c2" onClick={()=>_onClick()}><FontAwesomeIcon icon={faWindowMinimize} /></button>
         <button className="button-modal-top-bar bg-color-p2-c1" onClick={()=>_onClick()}><FontAwesomeIcon icon={faTimes} /></button>

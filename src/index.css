@@ -22,6 +22,10 @@
 	font-family: 'Nunito-Bold';
 	src: url('./style/fonts/Nunito/Nunito-Bold.ttf');
 }
+@font-face{
+  font-family: 'Traveler';
+  src: url(./style/fonts/Traveler/Traveler.ttf);
+}
 
 *{box-sizing: border-box;}
 body {

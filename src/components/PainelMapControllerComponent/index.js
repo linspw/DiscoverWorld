@@ -21,13 +21,13 @@ const PainelMapControllerComponent = (props) => {
     }
     return (
         <div className="painel-map-controller">
-            <button className="painel-map-item map-item-border map-item-border-left"><FontAwesomeIcon icon={faGlobeAmericas}/></button>
-            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faPassport}/></button>
-            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faMap}/></button>
+            <button className="painel-map-item map-item-border map-item-border-left"><FontAwesomeIcon icon={faGlobeAmericas}/></button>{/*Lista Países do mundo*/}
+            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faPassport}/></button>{/*Lista Países do mundo*/}
+            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faMap}/></button>{/*Lista Países do mundo*/}
             <div className="painel-map-item map-item-border logo">
-                <button className="context" onClick={()=>_onClickMainButton()}><FontAwesomeIcon icon={faPaperPlane}/></button>
+                <button className="context" onClick={()=>_onClickMainButton()}><FontAwesomeIcon icon={faPaperPlane}/></button>{/*Main APP - Mapa Global*/}
             </div>
-            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faUmbrellaBeach}/></button>
+            <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faUmbrellaBeach}/></button>{/*Lista dos lugares mais procurados mundo*/}
             <button className="painel-map-item map-item-border"><FontAwesomeIcon icon={faCompass}/></button>
             <button className="painel-map-item map-item-border-right"><FontAwesomeIcon icon={faTree}/></button>
         </div>
